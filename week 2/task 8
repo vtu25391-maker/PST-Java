@@ -1,0 +1,19 @@
+class UserMainCode {
+
+    public static int weightHillPattern(int input1, int input2, int input3) {
+
+        int levels = input1;
+        int headWeight = input2;
+        int increment = input3;
+
+        int totalWeight = 0;
+        int currentWeight = headWeight;
+
+        for (int level = 1; level <= levels; level++) {
+            totalWeight += level * currentWeight;
+            currentWeight += increment;
+        }
+
+        return totalWeight;
+    }
+}
